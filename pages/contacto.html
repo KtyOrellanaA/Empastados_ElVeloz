@@ -1,0 +1,154 @@
+<!--👋😊 ¡Hola!
+    Te saluda Katty Orellana del equipo de ktypili.com . Te invito a seguirnos en las redes sociales, búscanos como: @KtyPili 
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Esta línea indica su optimización para diferentes dispositivos señalados en las medias queries-->
+    <title>Empastados EL VELOZ / Contacto</title>
+    <!--Solicitando que se cargue más rápido la hoja de estilo-->
+    <link rel="preload" href="../css/styles2.css" as="style">
+    <!--Este es para copiar librerías de Font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Creando la etiqueta para el CSS-->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/styles1.css">
+    <link rel="shortcut icon" href="../images/Favicon.png">
+</head>
+<body>
+    <header>
+        <img src="../images/Logo_ElVELOZ_color.png" alt="Logo de Empastados EL VELOZ a full color" class="logo">
+        <nav class="navbar1">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <ul class="navbar1__paginas">
+                <li><a href="../index.html" class="navbar1__paginas__a">Inicio</a></li>
+                <li><a href="../pages/nosotros.html" class="navbar1__paginas__a">Nosotros</a></li>
+                <!--Desplegando el submenú haciendo uso de listas para ser editado en el CSS-->
+                <li><a href="#" class="navbar1__paginas__a">Servicios</a>
+                    <!-- <ul class="navbar1__paginas__a2">
+                        <li><a href="pages/encuadernados.html">Servicio de encuadernación</a></li>
+                        <li><a href="pages/empastados.html">Servicio de empastados</a></li>
+                    </ul> -->
+                </li>            
+                <li><a href="../pages/contacto.html" class="navbar1__paginas__a">Contacto</a></li>
+            </ul>  
+        </nav>
+    </header>
+    <!----------------------->
+    <!--Este ira para el banner de las páginas-->
+    <section class="banner5 screen-768 screen-480">
+        <section class="banner_desc">
+            <h1>¡Conéctate con nosotros!</h1>
+            <p>Estamos aquí para responder tus preguntas y asesorarte en cada paso. ¡Contáctanos!</p>
+        </section>
+    </section>
+    <!----------------------->
+    <!--Contenido principal-->
+    <main class="info__contacto screen-768">
+        <section class="informacion__grupo screen-768">
+            <section class="informacion__grupo__desc">
+                <h2>¿Listo para comenzar tu próximo proyecto?</h2>
+                <p>¡Cuéntanos! Estamos emocionados de conocer los detalles de tus trabajos y ofrecerte soluciones personalizadas.</p>
+            </section>
+            <!--Formulario inicia-->
+            <section class="form">
+                <form action="#" method="post" enctype="text/plain" class="form__grupo">
+                    <div class="form__grupo__datos">
+                        <div>
+                            <label for="">Nombre y apellido</label>
+                            <input type="text" placeholder="Escribe tu nombre aquí ..." class="recuadro">
+                        </div>
+                        <div>
+                            <label for="">Correo electrónico</label>
+                            <input type="email" name="" id="" placeholder="nombre@email.com" class="recuadro">
+                        </div>
+                        <div>
+                            <label for="">Celular (WhatsApp)</label>
+                            <input type="tel" placeholder="Número de celular" class="recuadro">
+                        </div>
+                        <div>
+                            <label for="">Mensaje</label>
+                            <textarea name="" id="" cols="30" rows="10" placeholder="Escribe sobre tu próximo proyecto ..." class="recuadro"></textarea>
+                        </div>
+                        <div class="enviar">
+                            <input type="submit" value="Enviar">
+                        </div>               
+                    </div>
+                </form>
+            </section>
+            <!--Formulario fin-->          
+        </section>
+        <hr class="linea__horizontal2">
+        <section class="informacion__grupo">
+            <section class="informacion__grupo__desc">
+                <h2>Mapa de ubicación</h2>
+                <p>Estamos ubicados en: <br>
+                    Jr. Azángaro 1029. Lima - Perú <br>
+                    (Altura del Centro Cívico)</p>
+            </section>
+            <!--Mapa-->
+            <div class="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.8234193418198!2d-77.03630122506605!3d-12.05566754206633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8c76346d065%3A0x5683671c80764dfe!2sJr.%20Az%C3%A1ngaro%201029%2C%20Lima%2015001!5e0!3m2!1ses!2spe!4v1690736608135!5m2!1ses!2spe" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
+    <!----------------------->
+    <!--Otra sección-->
+    <section class="frase">
+        <p>Recuerda que en <span>Empastados <span class="mayusculas">el veloz,</span></span> estamos aquí para <span>cuidar tus proyectos como si fueran nuestros propios tesoros.</span> ¡Te esperamos con los brazos abiertos y un servicio cálido y profesional! 💼🎓📚</p>
+    </section>
+    <!----------------------->
+    <!--Pié de página-->
+    <footer>
+        <a href="https://wa.link/a9kzv6" class="whatsapp" target="_blank">
+            <img src="../images/WhatsApp.png" alt="Ícono para WhatsApp">
+        </a>
+        <a href="#" class="subir">
+            <i class="fa-solid fa-chevron-up"></i>
+        </a>
+        <div class="columnas screen-768">
+            <section class="columnas__section">
+                <img src="../images/Logo_ElVELOZ_blanco.png" alt="Logo de Empastados EL VELOZ en color blanco" width="210px" class="logo screen-768">
+            </section>
+            <section class="columnas__section">
+                <p><span class="mayusculas">Navegación</span></p>
+                <nav class="columnas__section__navbar">
+                    <a href="../index.html">Inicio</a>
+                    <a href="../pages/nosotros.html">Nosotros</a>
+                    <a href="../pages/encuadernados.html">Servicio de encuadernación</a>
+                    <a href="../pages/empastados.html">Servicio de empastado</a>
+                    <a href="../pages/contacto.html">Contacto</a>
+                </nav>
+            </section> 
+            <section class="columnas__section contacto-navbar">
+                <div class="columnas__section__contact">
+                    <h3><span class="mayusculas">Contacto</span></h3>
+                    <p>Jr. Azángaro 1029, Lima, Perú<br>
+                    (Altura del Centro Cívico) <br>
+                    <span class="mayusculas normal">Sr. ROMMY</span> 988 090 004</p>
+                </div>
+                <div>
+                    <nav class="columnas__section__navbar2">
+                        <a href="https://www.facebook.com/empastadoselveloz" target="_blank"><img src="../images/RRSS_Facebook.png" alt="Logo de la red social Facebook"></a>
+                        <a href="https://www.linkedin.com/company/empastados-el-veloz/" target="_blank"><img src="../images/RRSS_LinkedIn.png" alt="Logo de la red social LinkedIn"></a>
+                        <a href="https://www.tiktok.com/@empastadoselveloz" target="_blank"><img src="../images/RRSS_TikTok.png" alt="Logo de la red social TikTok"></a>
+                        <a href="https://www.instagram.com/empastadoselveloz/" target="_blank"><img src="../images/RRSS_Instagram.png" alt="Logo de la red social Instagram"></a>
+                        <a href="https://twitter.com/EmpElVeloz" target="_blank"><img src="../images/RRSS_Twitter2.png" alt="Logo de la red social Twitter"></a>
+                        <a href="https://www.threads.net/@empastadoselveloz" target="_blank"><img src="../images/RRSS_Threads.png" alt="Logo de la red social Threads"></a>
+                    </nav>
+                </div>
+            </section>
+        </div>
+        <hr class="linea__horizontal">
+    </footer>
+    <section class="final">
+        <p class="final__copyright">Derechos reservados <span>© 2023 Empastados <span class="mayusculas">El Veloz.</span></span></p>
+        <p class="final__por">Diseñado y desarrollado por <a href="https://linktr.ee/ktypili" target="_blank"><span class="mayusculas">Kty&Pili.</span></a></p>
+    </section>
+</body>
+</html>
