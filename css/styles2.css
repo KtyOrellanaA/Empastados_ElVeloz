@@ -152,6 +152,74 @@ body{
 }
 
 /*--------------------------------------------*/
+/*Trabajando en el área de banner PAGINAS*/
+/* banner2 = nosotros / banner3 = encuadernados / banner4 = empastados / banner5 = contacto
+*/
+.banner2{ /*nosotros*/
+    width: 100%;
+    height: 36rem;
+    background-image: url(../images/Imag_Nosotros_1b.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: right center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.banner3{ /*encuadernados*/
+    height: 36rem;
+    background-image: url(../images/Imag_Encuadernados_1b.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: right center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.banner4{ /*empastados*/
+    height: 36rem;
+    background-image: url(../images/Imag_Empastados_1b.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: right center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.banner5{ /*contacto*/
+    height: 36rem;
+    background-image: url(../images/Imag_Inicio_3b.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: right center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner_desc {
+    width: 55%;
+    height: 100%;
+    background-color: var(--color-azul);
+    padding-left: var(--margen-lateral);
+    padding-right: 3.6rem;
+    display: grid;
+    align-content: center;
+}
+.banner2 h1, .banner3 h1, .banner4 h1, .banner5 h1{
+    font-size: 3.6rem;
+    color: var(--color-claro2);
+    margin-bottom: 3.2rem;
+    line-height: var(--altura-linea);
+}
+.banner_desc p{
+    font-size: 2.2rem;
+    color: var(--color-claro2);
+    margin-bottom: 3.2rem;
+    line-height: var(--altura-linea);
+}
+
+/*--------------------------------------------*/
 /*Propiedades y valores para los títulos*/
 h2{
     color: var(--color-azul);
@@ -207,6 +275,52 @@ p span{
     object-position: center;
 }
 
+/*--------------------------------------------*/
+/*Esta es para el main PAGINAS*/
+main.informacion{
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    grid-gap: 0rem 0rem;
+}
+
+.informacion{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: var(--margen-lateral);
+    margin-right: var(--margen-lateral);
+    line-height: var(--altura-linea);
+    justify-content: space-evenly;
+}
+
+.informacion__grupo{
+    width: 100%;
+    display: flex;
+    align-items: normal; 
+    margin: 5.2rem 2.4rem;
+    gap: 4.8rem;
+}
+.informacion__grupo__desc{
+    flex-direction: column;
+}
+
+.informacion__grupo__desc h2 , .informacion__grupo__desc p , .informacion__grupo__desc ul li {
+    line-height: 140%;
+    margin-top: 1.6rem;
+}
+
+.informacion__grupo__desc ul li {
+    margin-left: 3.2rem;
+}
+
+/* Estilos para la imagen circular */
+.informacion__grupo img{
+    width: 28rem;
+    height: 28rem;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
 
 /*--------------------------------------------*/
 /*Esta sección se repite al FINAL de todas las páginas*/
@@ -334,6 +448,16 @@ hr{
         object-fit: cover;
         object-position: center;
     }
+    /*--------------------------------------------*/
+    /*Esta es para el main PAGINAS*/
+    /* Estilos para la imagen circular */
+    .informacion__grupo img{
+        width: 16rem;
+        height: 16rem;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+    }
 }
 
 /*md de Bootstrap*/
@@ -373,6 +497,33 @@ hr{
         object-fit: cover;
         object-position: center;
     }
+    /*--------------------------------------------*/
+    /*Esta es para el main PAGINAS*/
+    .informacion.md{
+        margin-top: 3.6rem;
+        margin-bottom: 3.6rem;
+    }
+    .informacion__grupo{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1.6rem;
+        gap: 2.4rem;
+    }
+    .informacion__grupo.reverse{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    /* Estilos para la imagen circular */
+    .informacion__grupo img{
+        width: 28rem;
+        height: 28rem;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+    }
+
     /*----------------------------------*/
     /*Esta sección se repite al FINAL de todas las páginas*/
     .columnas.md {
@@ -508,5 +659,12 @@ hr{
         background-color:var(--color-azul);
         border: 0.25rem solid var(--color-claro2);
         justify-self: center;
+    }
+    /*--------------------------------------------*/
+    /*Esta es para el main PAGINAS*/
+    /* Estilos para la imagen circular */
+    .informacion__grupo img{
+        width: 20rem;
+        height: 20rem;
     }
 }
