@@ -12,25 +12,26 @@
     <link rel="preload" href="css/styles2.css" as="style">
     <!--Este es para copiar librerías de Font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!--CSS de Bootstrap inicia-->
+    <!--Bootstrap inicia-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <!--CSS de Bootstrap fin-->
+    <!--Bootstrap fin-->
     <!--Creando la etiqueta para el CSS-->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles2.css">
     <link rel="shortcut icon" href="images/Favicon.png">
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm navbar-light">
+    <nav class="navbar1 navbar navbar-expand-lg navbar-light md">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
-                <img src="images/Logo_ElVELOZ_color.png" alt="Logo de Empastados EL VELOZ a full color" class="logo">
+                <img src="images/Logo_ElVELOZ_color.png" alt="Logo de Empastados EL VELOZ a full color" class="logo md">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar1__boton navbar-toggler lg" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <!--Icono bars de fontawesome-->
+                <i class="fa-solid fa-bars fa-beat"></i>
             </button>
             <div class="collapse navbar-collapse d-flexs justify-content-end" id="collapsibleNavbar">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav align-bottom">
                     <li class="nav-item">
                         <a href="index.html" class="nav-link navbar1__paginas__a">Inicio</a>
                     </li>
@@ -51,39 +52,14 @@
             </div>
         </div>
     </nav>
-    <!--Este irá para el banner de las páginas-->
-    <!-- <header class="cabecera d-flex align-items-center container-fluid"> -->
-    <header class="cabecera d-flex align-items-center">
-        <div class="cabecera__grupo d-flex position-relative">
-            <!-- <div class="col-md-7"> -->
-            <div class="d-flex align-content-center text-light position-absolute">
-                <div class="cabecera__cta align-content-center text-light">
-                    <h1 class="mb-3">Empastados <span class="mayusculas">el Veloz:</span><br> Tu solución en encuadernación y empastado.</h1>
-                    <p class="mb-3">Donde tus proyectos y documentos más importantes adquieren un toque de excelencia. 📚✨</p>
-                    <a href="pages/contacto.html" class="btn btn-primary">¡Contáctanos!</a>
-                </div>
-            </div>
-            <div class="cabecera__imag col-md-12">
-                <div class="d-flex justify-content-center align-items-center">
-                    <img src="images/Imag_Inicio_1b.jpg" alt="Torre de libros" class="img-fluid">
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!--
-    <header class="cabecera d-flex align-item-center">
+    <!--HEADER-->
+    <header class="cabecera">
         <div class="cabecera__cta">
-            <h1>Empastados <Span class="mayusculas">el Veloz:</Span><br> Tu solución en encuadernación y empastado.</h1>
-            <p>Donde tus proyectos y documentos más importantes adquieren un toque de excelencia. 📚✨</p>
-            <a href="pages/contacto.html">¡Contáctanos!</a>
-        </div>
-        <div>
-            <img src="images/Imag_Inicio_1b.jpg" alt="Torre de libros" class="">
-        </div>
+            <h1 class="">Empastados <span class="mayusculas">el Veloz:</span><br> Tu solución en encuadernación y empastado.</h1>
+            <p class="">Donde tus proyectos y documentos más importantes adquieren un toque de excelencia. 📚✨</p>
+            <a href="pages/contacto.html" class="btn btn-primary">¡Contáctanos!</a>
+        </div>        
     </header>
--->
-
     <!----------------------->
     <!--Contenido principal-->
     <main class="screen-768">
@@ -118,11 +94,17 @@
     </main>
     <!----------------------->
     <!--Otra sección-->
+
+    <!--
     <section class="frase">
         <p>Recuerda que en <span>Empastados <span class="mayusculas">el veloz,</span></span> estamos aquí para <span>cuidar tus proyectos como si fueran nuestros propios tesoros.</span> ¡Te esperamos con los brazos abiertos y un servicio cálido y profesional! 💼🎓📚</p>
     </section>
+    -->
+
     <!----------------------->
     <!--Pie de página-->
+
+    <!--
     <footer>
         <a href="https://wa.link/a9kzv6" class="whatsapp" target="_blank">
             <img src="images/WhatsApp.png" alt="Ícono para WhatsApp">
@@ -169,6 +151,11 @@
         <p class="final__copyright">Derechos reservados <span>© 2023 Empastados <span class="mayusculas">El Veloz.</span></span></p>
         <p class="final__por">Diseñado y desarrollado por <a href="https://linktr.ee/ktypili" target="_blank"><span class="mayusculas">Kty&Pili.</span></a></p>
     </section>
+    -->
+
+
+
+
     <!--JS de Bootstrap inicia-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <!--JS de Bootstrap fin-->
