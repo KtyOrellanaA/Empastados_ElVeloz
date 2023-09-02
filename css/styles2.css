@@ -34,7 +34,6 @@
     font-family: 'Fira Sans', sans-serif;
     box-sizing: border-box;
 }
-/*--------------------------------------------*/
 html{
     font-size: 62.5%;
     scroll-behavior: smooth; /*Permite scrollear de forma suave al dar clic al botón SUBIR*/
