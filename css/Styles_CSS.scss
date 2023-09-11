@@ -1,34 +1,32 @@
-/*SASS para luego compilarse con CMD*/
-:root{
-    /*Colores*/
-    --color-azul: #006EBB;
-    --color-verde1: #099138;
-    --color-verde2: #00B883;
-    --color-oscuro: #113234;
-    --color-oscuro2: #2F676A;
-    --color-gris1: #7EA7AA;
-    --color-gris2: #C7D9DA;
-    --color-claro1: #EFF3F5;
-    --color-claro2: #FFFFFF;
-    /*Gradientes usados en botones para hover*/
-    --gradiente: linear-gradient(to top, var(--color-verde2), var(--color-azul));
-    /*Color con transparencia*/
-    --color-oscuro2-transparencia: #2f676a85;
-    --color-azul-transparencia: #006dbbc4;
-    /*Otras variables*/
-    --margen-lateral: 8%;
-    --margen-lateral2: 5%;
-    --margen-lateral3: 3%;
-    --altura-linea: 120%;
-    --altura-linea2: 150%;
-    --altura-header: 10.5rem;
-    --altura-header2: 8.6rem;
-    --altura-header3: 8rem;
-}
-/*Fuentes principales*/
+//Colores 
+$color-azul: #006EBB;
+$color-verde1: #099138;
+$color-verde2: #00B883;
+$color-oscuro: #113234;
+$color-oscuro2: #2F676A;
+$color-gris1: #7EA7AA;
+$color-gris2: #C7D9DA;
+$color-claro1: #EFF3F5;
+$color-claro2: #FFFFFF;
+//Gradientes para botones - hover
+$gradiente: linear-gradient(to top, $color-verde2, $color-azul);
+//Color con transparencia
+$color-oscuro2-transparencia: rgba($color-oscuro2, 0.65);
+$color-azul-transparencia: rgba($color-azul, 0.77);
+//Otras variables
+$margen-lateral: 8%;
+$margen-lateral2: 5%;
+$margen-lateral3: 3%;
+$altura-linea: 120%;
+$altura-linea2: 150%;
+$altura-header: 10.5rem;
+$altura-header2: 8.6rem;
+$altura-header3: 8rem;
+
+//Fuentes principales
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&display=swap');
-/*font-family: 'Fira Sans', sans-serif;*/
-/*Fira Sans--> Regular(400), Medium(500), Semibold(600), Bold(700)*/
+//font-family: 'Fira Sans', sans-serif;
+//Fira Sans--> Regular(400), Medium(500), Semibold(600), Bold(700)
 *{
     margin: 0;
     padding: 0;
@@ -37,23 +35,24 @@
 }
 html{
     font-size: 62.5%;
-    scroll-behavior: smooth; /*Permite scrollear de forma suave al dar clic al botón SUBIR*/
+    scroll-behavior: smooth;
+    //Permite scrollear de forma suave al dar clic al botón SUBIR
 }
 body{
-    font-size: 16px; /*1rem = 10px*/
+    font-size: 16px; //1rem = 10px
 }
 
-/*--------------------------------------------*/
-/*Utilizando NESTING en el NAVBAR*/
+//-----------
+/*NAVBAR*/
 .navbar {
     padding: 0;
     &-nav.align-bottom {
         margin-top: 3.6rem;
     }
     &1 {
-        background-color: var(--color-claro2) !important;
-        padding-left: var(--margen-lateral);
-        padding-right: var(--margen-lateral);
+        background-color: $color-claro2 !important;
+        padding-left: $margen-lateral;
+        padding-right: $margen-lateral;
         &__boton {
             border: 0;
             i {
@@ -71,27 +70,28 @@ body{
         }
         .nav-item a {
             padding: 1.6rem 2.4rem !important;
-            color: var(--color-oscuro2) !important;
+            color: $color-oscuro2 !important;
             &.nav-link {
                 font-size: 2.2rem;
-                border-bottom: 0.5rem solid var(--color-claro2);
+                border-bottom: 0.5rem solid $color-claro2;
                 &:hover, &:active {
-                    color: var(--color-azul) !important;
+                    color: $color-azul !important;
                     font-weight: 500 !important;
                     font-size: 2.2rem !important;
-                    border-bottom: 0.5rem solid var(--color-azul);
+                    border-bottom: 0.5rem solid $color-azul;
                 }
             }
         }
         .dropdown-menu {
             padding: 0;
             li {
-                background-color: var(--color-claro1) !important;
+                background-color: $color-claro1 !important;
                 a {
-                    color: var(--color-oscuro2) !important;        
+                    color: $color-oscuro2 !important;
+                    font-size: 2.2rem;  
                     &:hover, &:active {
-                        background-color: var(--color-azul) !important;
-                        color: var(--color-claro2) !important;
+                        background-color: $color-azul !important;
+                        color: $color-claro2 !important;
                         font-weight: 500 !important;
                     }
                 }
@@ -99,23 +99,23 @@ body{
         }
     }
 }
-/*--------------------------------------------*/
-/*Utilizando NESTING para el HEADER*/
+//-----------
+/*HEADER*/
 .cabecera {
-    width: 100%;
-    height: 48rem;
-    background-image: url(images/Imag_Inicio_1b.jpg);
+    // width: 100%;
+    height: 48rem;    
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-position: right center;
     display: flex;
     align-items: center;
+    background-image: url(../images/Imag_Inicio_1b.jpg);    
     
     &__cta {
         width: 60%;
         height: 100%;
-        padding-left: var(--margen-lateral);
+        padding-left: $margen-lateral;
         padding-right: 3.6rem;
         display: grid;
         align-content: center;
@@ -123,107 +123,89 @@ body{
         h1 {
             font-size: 3.6rem;
             font-weight: 600;
-            color: var(--color-azul);
+            color: $color-azul;
             margin-bottom: 3.2rem;
-            line-height: var(--altura-linea);
+            line-height: $altura-linea;
         }
         p {
             font-size: 2.2rem;
             margin-bottom: 3.2rem;
-            line-height: var(--altura-linea);
+            line-height: $altura-linea;
         }
         a {
-            background-color: var(--color-azul);
-            color: var(--color-claro2);
+            background-color: $color-azul;
+            color: $color-claro2;
             text-decoration: none;
             padding: 1rem 2.4rem;
             font-size: 2.2rem;
             border-radius: 24px;
             justify-self: start;
             &:hover {
-            background-image: var(--gradiente);
+            background-image: $gradiente;
             }
         }
     }
 }
-/*--------------------------------------------*/
-/* Área de banner PAGINAS */
-/* banner2 = nosotros / banner3 = encuadernados / banner4 = empastados / banner5 = contacto
-*/
-.banner2{ /*nosotros*/
-    width: 100%;
+//-----------
+/*Área de banner PAGINAS*/
+// banner2 = nosotros / banner3 = encuadernados / banner4 = empastados / banner5 = contacto
+.banner2, .banner3, .banner4, .banner5 {
     height: 36rem;
-    background-image: url(../images/Imag_Nosotros_1b.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-position: right center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-.banner3{ /*encuadernados*/
-    height: 36rem;
-    background-image: url(../images/Imag_Encuadernados_1b.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: right center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.banner4{ /*empastados*/
-    height: 36rem;
-    background-image: url(../images/Imag_Empastados_1b.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: right center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.banner5{ /*contacto*/
-    height: 36rem;
-    background-image: url(../images/Imag_Inicio_3b.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: right center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+
+    &.banner2 { //nosotros
+        background-image: url(../images/Imag_Nosotros_1b.jpg);
+    }
+    &.banner3 { //encuadernados
+        background-image: url(../images/Imag_Encuadernados_1b.jpg);
+    }
+    &.banner4 { //empastados
+        background-image: url(../images/Imag_Empastados_1b.jpg);
+    }
+    &.banner5 { //contacto
+        background-image: url(../images/Imag_Inicio_3b.jpg);
+    }
 }
 
 .banner_desc {
     width: 55%;
     height: 100%;
-    background-color: var(--color-azul);
-    padding-left: var(--margen-lateral);
+    background-color: $color-azul;
+    padding-left: $margen-lateral;
     padding-right: 3.6rem;
     display: grid;
     align-content: center;
 }
-.banner2 h1, .banner3 h1, .banner4 h1, .banner5 h1{
+
+.banner2 h1, .banner3 h1, .banner4 h1, .banner5 h1 {
     font-size: 3.6rem;
-    color: var(--color-claro2);
+    color: $color-claro2;
     margin-bottom: 3.2rem;
-    line-height: var(--altura-linea);
-}
-.banner_desc p{
-    font-size: 2.2rem;
-    color: var(--color-claro2);
-    margin-bottom: 3.2rem;
-    line-height: var(--altura-linea);
+    line-height: $altura-linea;
 }
 
-/*--------------------------------------------*/
+.banner_desc p {
+    font-size: 2.2rem;
+    color: $color-claro2;
+    margin-bottom: 3.2rem;
+    line-height: $altura-linea;
+}
+
+//-----------
 /*Propiedades y valores para los títulos*/
 h2{
-    color: var(--color-azul);
+    color: $color-azul;
     font-weight: 600;
 }
 p span{
     font-weight: 500;
 }
-/*Algunas clases aplicadas a tos textos con SPAN*/
+//Algunas clases aplicadas a los textos con SPAN
 .mayusculas{
     text-transform: uppercase;
 }
@@ -234,17 +216,17 @@ p span{
     margin-bottom: 1.6rem;
 }
 
-/*--------------------------------------------*/
-/*Nesting para las 4 secciones del main INICIO*/
+//-----------
+/*4 secciones del main INICIO*/
 .experiencia__grupo {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     margin-top: 4.5rem;
     margin-bottom: 4.5rem;
-    margin-left: var(--margen-lateral);
-    margin-right: var(--margen-lateral);
-    line-height: var(--altura-linea);
+    margin-left: $margen-lateral;
+    margin-right: $margen-lateral;
+    line-height: $altura-linea;
     grid-gap: 2.4rem 1.6rem;
 
     .experiencia {
@@ -258,7 +240,7 @@ p span{
             margin-left: 2.4rem;
             h2,
             p {
-                line-height: var(--altura-linea);
+                line-height: $altura-linea;
                 margin-top: 1.6rem;
             }
         }
@@ -274,57 +256,212 @@ p span{
         }
     }
 }
-/*--------------------------------------------*/
-/*Esta es para el main PAGINAS*/
-main.informacion{
+//-----------
+/*Main PAGINAS*/
+main.informacion {
     margin-top: 0rem;
     margin-bottom: 0rem;
     grid-gap: 0rem 0rem;
 }
 
-.informacion{
+.informacion {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    margin-left: var(--margen-lateral);
-    margin-right: var(--margen-lateral);
-    line-height: var(--altura-linea);
+    margin-left: $margen-lateral;
+    margin-right: $margen-lateral;
+    line-height: $altura-linea;
     justify-content: space-evenly;
+
+    &__grupo {
+        width: 100%;
+        display: flex;
+        align-items: normal;
+        margin: 5.2rem 2.4rem;
+        gap: 4.8rem;
+
+        &__desc {
+            flex-direction: column;
+
+            h2, p, ul li {
+                line-height: 140%;
+                margin-top: 1.6rem;
+
+                ul li {
+                    margin-left: 3.2rem;
+                }
+            }
+        }
+    }
+
+    //Estilos para la imagen circular
+    & img {
+        width: 28rem;
+        height: 28rem;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+    }
 }
 
-.informacion__grupo{
+//-----------
+
+/*Esta sección se repite para ENCUADERNADOS y EMPASTADOS*/
+.linea__horizontal1 {
     width: 100%;
-    display: flex;
-    align-items: normal; 
-    margin: 5.2rem 2.4rem;
-    gap: 4.8rem;
-}
-.informacion__grupo__desc{
-    flex-direction: column;
+    border: none;
+    border-top: 0.2rem solid #D9D9D9;
+    margin-top: 3.5rem;
 }
 
-.informacion__grupo__desc h2 , .informacion__grupo__desc p , .informacion__grupo__desc ul li {
-    line-height: 140%;
-    margin-top: 1.6rem;
+/*Contenido de la galería*/
+.galeria__grupo {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 4rem;
 }
 
-.informacion__grupo__desc ul li {
-    margin-left: 3.2rem;
+.galeria__imag {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(28rem, 1fr));
+    gap: 1.6rem;
+    align-items: center;
 }
-/* Estilos para la imagen circular */
-.informacion__grupo img{
-    width: 28rem;
+
+.galeria__imag h2 {
+    flex-basis: 30%; 
+    border-radius: 8px;
+}
+
+.galeria__imag img {
+    width: 100%; 
     height: 28rem;
-    border-radius: 50%;
+    border-radius: 2.4rem;
     object-fit: cover;
     object-position: center;
 }
+
+.galeria__grupo h2 a {
+    display: inline-block;
+    white-space: nowrap; 
+    background-color: $color-claro2;
+    color: $color-azul;
+    text-decoration: none;
+    padding: 1rem 2.4rem;
+    font-size: 2.2rem;
+    border-radius: 24px;
+    border: 0.25rem solid $color-azul;
+    text-align: center;
+    white-space: normal;
+    line-height: $altura-linea2;
+}
+
+.galeria__grupo h2 , .galeria__imag {
+    padding-top: 4rem;
+}
+
 /*--------------------------------------------*/
-/*Sección que se repite al FINAL de las páginas*/
+/*Esta sección es para CONTACTO*/
+
+.info__contacto{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: $margen-lateral;
+    margin-right: $margen-lateral;
+    line-height: $altura-linea;
+    justify-content: space-evenly;
+}
+
+.info__contacto .informacion__grupo{
+    display: flex;
+    justify-content: space-between;
+    // align-items: flex-start;
+}
+
+.info__contacto .informacion__grupo .informacion__grupo__desc{
+    width: 40rem;
+    flex-direction: column;
+}
+/*FORMULARIO*/
+
+.form{
+    width: 95%;
+    padding-top: 1.6rem; 
+    /* padding-bottom: 1.6rem; */
+}
+
+.form__grupo__datos{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    color: $color-oscuro2;
+}
+
+.form__grupo__datos div{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    margin-bottom: 1.2rem;
+}
+
+.recuadro{
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+    outline: none;
+    border: 0.16rem solid $color-gris1;
+}
+
+.recuadro:focus{
+    border: 0.2rem solid $color-azul;
+}
+
+.enviar input{
+    background-color: $color-claro2;
+    color: $color-azul;
+    text-decoration: none;
+    padding: 1rem 2.4rem;
+    font-size: 2.2rem;
+    border-radius: 24px;
+    border: 0.25rem solid $color-azul;
+    text-align: center;
+    margin-top: 1.6rem;
+    font-weight: 600;
+}
+
+/*MAPA*/
+.mapa {
+    width: 100%;
+}
+
+.linea__horizontal2 {
+    width: 100%;
+    border: none;
+    border-top: 0.2rem solid #D9D9D9;
+    margin-top: 0rem;
+}
+
+//-----------
+/*FINAL de las páginas*/
+
+.frase{
+    background-color: $color-gris1;
+    text-align: center;
+    padding: 5rem $margen-lateral;
+}
+.frase p{
+    color: $color-claro2;
+    font-size: 2.2rem;
+    line-height: $altura-linea2;
+}
+
 footer {
-    background-color: var(--color-azul);
-    padding-left: var(--margen-lateral);
-    padding-right: var(--margen-lateral);
+    background-color: $color-azul;
+    padding-left: $margen-lateral;
+    padding-right: $margen-lateral;
     padding-top: 4rem;
 
     .whatsapp {
@@ -340,11 +477,11 @@ footer {
         bottom: 3rem;
         right: 6rem;
         position: fixed;
-        background-color: var(--color-oscuro2-transparencia);
-        color: var(--color-claro2);
+        background-color: $color-oscuro2-transparencia;
+        color: $color-claro2;
         border-radius: 50%;
         text-align: center;
-        line-height: var(--altura-linea2);
+        line-height: $altura-linea2;
         font-size: 3.5rem;
         box-shadow: 0 0 8px;
     }
@@ -352,7 +489,7 @@ footer {
     .columnas {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        color: var(--color-claro2);
+        color: $color-claro2;
         gap: 1.6rem;
         .columnas__section {
             display: flex;
@@ -366,6 +503,7 @@ footer {
             display: flex;
             flex-direction: column;
             text-decoration: none;
+            color: $color-claro1;
             }
         }
         .columnas__section__contact {
@@ -389,26 +527,28 @@ footer {
     .linea__horizontal {
         width: 100%;
         border: none;
-        border-top: 0.1rem solid var(--color-claro1);
+        border-top: 0.1rem solid $color-claro1;
         margin-top: 3.5rem;
     }
 }
 
 .final {
-    background-color: var(--color-azul);
+    background-color: $color-azul;
     padding-top: 1.6rem;
     padding-bottom: 4.8rem;
-    padding-left: var(--margen-lateral);
-    padding-right: var(--margen-lateral);
+    padding-left: $margen-lateral;
+    padding-right: $margen-lateral;
 
     .final__copyright {
         float: left;
+        color: $color-claro2;
     }
 
     .final__por {
         float: right;
+        color: $color-claro2;
         a {
-            text-decoration: none;
+            text-decoration: none;            
         }
     }
 
@@ -418,16 +558,16 @@ footer {
     .final p,
     .final__por a {
         font-size: 1.6rem;
-        line-height: var(--altura-linea2);
-        color: var(--color-claro2);
+        line-height: $altura-linea2;
+        color: $color-claro2;
     }
 }
 
-/*--------------------------------------------*/
-/*Inicia las media Queries*/
-/*sm de Bootstrap*/
+//-----------
+/*INICIA media Queries*/
+//sm de Bootstrap
 @media only screen and (min-width: 0) and (max-width: 576px){
-    .experiencia.md.sm{
+    .experiencia {
         width: 100%;
         display: flex;
         flex-direction: column; 
@@ -436,20 +576,19 @@ footer {
         margin-top: 1.6rem;
         text-align: center;
     }
-    .experiencia__desc.md.sm h2{
+    .experiencia__desc h2{
         margin-top: 1.6rem;
     }
     /* Estilos para la imagen circular */
-    .experiencia__imag.md.sm img{
+    .experiencia__imag img{
         width: 11rem;
         height: 11rem;
         border-radius: 50%;
         object-fit: cover;
         object-position: center;
     }
-    /*--------------------------------------------*/
-    /*Esta es para el main PAGINAS*/
-    /* Estilos para la imagen circular */
+    //-----------
+    /*Main PAGINAS - imagen circular */
     .informacion__grupo img{
         width: 16rem;
         height: 16rem;
@@ -457,15 +596,38 @@ footer {
         object-fit: cover;
         object-position: center;
     }
+    /*--------------------------------------------*/
+    /*Contenido de la galería*/
+    .galeria__grupo {
+        margin-bottom: 3.2rem;
+    }
+
+    .galeria__imag {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+        grid-template-rows: repeat(auto-fill, minmax(16rem, 1fr));
+        gap: 1.6rem;
+        align-items: center;
+    }
+
+    .galeria__imag img {
+        height: 16rem;
+    }
+
+    .galeria__grupo h2 , .galeria__imag {
+        padding-top: 3.2rem;
+        line-height: $altura-linea2;
+    }
+
 }
 
-/*md de Bootstrap*/
+//md de Bootstrap
 @media only screen and (max-width: 768px){
     /*Trabajando el NAVBAR*/
     .navbar1.md{
-        padding-left: var(--margen-lateral3);
-        padding-right: var(--margen-lateral3);
-        height: var(--altura-header3);
+        padding-left: $margen-lateral3;
+        padding-right: $margen-lateral3;
+        height: $altura-header3;
     }
     .logo.md{
         width: 18rem;
@@ -480,9 +642,9 @@ footer {
     /*----------------------------------*/
     /*Sección experiencias de INICIO*/
     .experiencia__grupo.md{
-        margin-left: var(--margen-lateral2);
-        margin-right: var(--margen-lateral2);
-        line-height: var(--altura-linea);
+        margin-left: $margen-lateral2;
+        margin-right: $margen-lateral2;
+        line-height: $altura-linea;
         row-gap: 1.6rem;
     }
     .experiencia__desc.md h2{
@@ -526,9 +688,9 @@ footer {
     /*----------------------------------*/
     /*Esta sección se repite al FINAL de todas las páginas*/
     .columnas.md {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
+        display: flex !important;
+        flex-direction: column !important;
+        text-align: center;        
     }
     .columnas__section__contact {
         display: grid;
@@ -536,22 +698,22 @@ footer {
     }
     .logo2.md {
         display: block;
-        margin: 0 auto;
+        margin: 0 auto;        
     }
 }
 
-/*lg de Bootstrap*/
+//lg de Bootstrap
 @media only screen and (max-width: 992px){
     /*Trabajando el NAVBAR*/
     .navbar1{
         width: 100%;
-        height: var(--altura-header2);
+        height: $altura-header2;
     }
     .nav-link{
-        color: var(--color-oscuro2);
+        color: $color-oscuro2;
     }
     .navbar-collapse{
-        background-color: var(--color-claro2);
+        background-color: $color-claro2;
         display: flex;
         justify-content: center !important;
         width: 114% !important;
@@ -587,7 +749,7 @@ footer {
         text-align: center;
     }
     .dropdown-menu li{
-        background-color: var(--color-claro1) !important;
+        background-color: $color-claro1 !important;
     }
     .logo{
         width: 20rem;   
@@ -601,9 +763,63 @@ footer {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
     }
+    /*--------------------------------------------*/
+    /*Contenido de la galería*/
+    .galeria__grupo {
+        margin-bottom: 3.63rem;
+    }
+
+    .galeria__imag {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+        grid-template-rows: repeat(auto-fill, minmax(24rem, 1fr));
+        gap: 1.6rem;
+        align-items: center;
+    }
+
+    .galeria__imag img {
+        height: 24rem;
+    }
+
+    .galeria__grupo h2 , .galeria__imag {
+        padding-top: 4rem;
+    }
+
+    /*------------------------------------------*/
+    /*Esta sección es para CONTACTO*/
+
+    .info__contacto{
+        margin-top: 2.4rem;
+        margin-bottom: 1.6rem;
+    }
+
+    .info__contacto .informacion__grupo{
+        display: flex;
+        flex-direction: column;
+    }
+    .info__contacto .informacion__grupo .informacion__grupo__desc{
+        width: 100%;
+        flex-direction: column;
+    }
+    /*FORMULARIO*/
+
+    .form{
+        width: 100%;
+        padding-top: 0;
+    }
+
+    /*MAPA*/
+    .mapa {
+        width: 100%;
+    }
+    .linea__horizontal2{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    
     /*----------------------------------*/
     /*Esta sección se repite al FINAL de todas las páginas*/
-    .columnas {
+    .columnas.lg.md {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
@@ -625,13 +841,12 @@ footer {
     }    
 }
 
-
-/*xl de Bootstrap*/
+//xl de Bootstrap
 @media only screen and (max-width: 1140px){
     /*Trabajando el NAVBAR*/
     .navbar1{
-        padding-left: var(--margen-lateral2);
-        padding-right: var(--margen-lateral2);
+        padding-left: $margen-lateral2;
+        padding-right: $margen-lateral2;
     }
     /*----------------------------------*/
     /*Cabecera o BANNER de INICIO*/
@@ -645,8 +860,8 @@ footer {
     }
     .cabecera__cta, .banner_desc{
         width: 100%;
-        background: var(--color-azul-transparencia);
-        padding-right: var(--margen-lateral);
+        background: $color-azul-transparencia;
+        padding-right: $margen-lateral;
         display: grid;
         align-content: center;
     }
@@ -654,14 +869,14 @@ footer {
         color: #FFFFFF;
     }
     .cabecera__cta a, .banner_desc a{        
-        color: var(--color-claro2);
-        background-color:var(--color-azul);
-        border: 0.25rem solid var(--color-claro2);
+        color: $color-claro2;
+        background-color:$color-azul;
+        border: 0.25rem solid $color-claro2;
         justify-self: center;
     }
     /*--------------------------------------------*/
     /*Esta es para el main PAGINAS*/
-    /* Estilos para la imagen circular */
+    /* Para la imagen circular */
     .informacion__grupo img{
         width: 20rem;
         height: 20rem;
